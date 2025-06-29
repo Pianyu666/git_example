@@ -132,3 +132,6 @@ git stash save "WIP: 修改登录页面"
 | `squash` | 多个提交压缩为一个    | 是      | 精简 commit 历史 |
 | `stash`  | 临时保存未提交的更改   | 否      | 切换分支、临时保存工作  |
 
+git branch -d <feature>
+git branch --all
+
