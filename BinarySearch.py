@@ -11,6 +11,7 @@ def binary_search(arr: List[int], target: int) -> int:
 
     while left <= right:
         mid = left + (right - left) // 2
+        print(f"checking mid index: {mid}")
 
         if arr[mid] == target:
             return mid
