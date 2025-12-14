@@ -1,4 +1,6 @@
-def binary_search(arr, target):
+from typing import List
+
+def binary_search(arr: List[int], target: int) -> int:
     """
     二分查找（要求数组已排序）
     :param arr: 已排序的列表
