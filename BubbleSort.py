@@ -1,23 +1,20 @@
 def bubble_sort(arr):
     """
-    冒泡排序
-    :param arr: 待排序的列表
-    :return: 排序后的新列表
+    冒泡排序（记录最后交换位置优化）
     """
+    arr = arr.copy()
     n = len(arr)
-    arr = arr.copy()  # 不修改原列表
 
-    for i in range(n):
-        # 提前结束优化：如果一轮中没有发生交换，说明已经有序
-        swapped = False
-        for j in range(0, n - i - 1):
-            if arr[j] > arr[j + 1]:
-                arr[j], arr[j + 1] = arr[j + 1], arr[j]
-                swapped = True
-        if not swapped:
-            break
+    while n > 1:
+        last_swap = 0
+        for i in range(1, n):
+            if arr[i - 1] > arr[i]:
+                arr[i - 1], arr[i] = arr[i], arr[i - 1]
+                last_swap = i
+        n = last_swap  # 下一轮只需遍历到最后交换的位置
 
     return arr
+
 
 
 if __name__ == "__main__":
