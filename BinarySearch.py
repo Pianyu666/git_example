@@ -28,6 +28,8 @@ if __name__ == "__main__":
 
     index = binary_search(data, target)
     if index != -1:
-        print(f"找到 {target}，索引为 {index}")
+        print(f"[BinarySearch] target={target}, index={index}")
+
     else:
-        print(f"未找到 {target}")
+        print(f"[BinarySearch] target={target}, index={index}")
+
